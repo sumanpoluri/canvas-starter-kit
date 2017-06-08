@@ -1,0 +1,15 @@
+<div>
+<br/>
+<h2 id="contentTitle" class="sub-title">The Signed Request</h2>
+<p id="description">When the Signed Request access method is specified for your Canvas app, Salesforce requires a server side process to handle a POST to authorize the Canvas app and grant it access to interact with Salesforce. This kit uses a server-side javascript file that decodes the POST and launches your app (if authorized). This is based on the PHP solution used in Seedcode's version, which in turn was derived from the solution by <span><a href="https://github.com/joshbirk/Canvas-PHP" target="_blank">Joshua Birk</a></span> on github. Our server side javascript file, <span><a href="https://github.com/sumanpoluri/canvas-starter-kit/blob/master/routes/canvas.js" target="_blank">canvas.js</a></span> file is closely based on the <span><a href="https://github.com/seedcode/canvas-starter-kit/blob/master/php/canvas.php" target="_blank">canvas.php</a></span> file in Seedcode's Starter Kit. When you set up your Canvas app, you will need to direct it to the canvas.js page. You will also need to add the <span class="bold">Consumer Secret</span>, obtained from the Canvas app set-up, to the appropriate place in this page. This page will determine if the app is set to have users self-authorize, or if profiles are pre-authorized by an admin. If set to self-authorize, then the user will be sent to the OAuth page, where they can initiate the authorization process, once authorized they will be directed to the app. If pre-authorized, users will be taken directly to the app.</p>
+<br/>
+<p>When the app loads, we invoke an initialize method that refreshes the Signed Request(SR) and stores it. We store the SR, because it contains the client object which is required for making calls via the JavaScript SDK. We also pass a callback to the initialize() method, which is not required, but confirms the process by returning the SR.</p>
+<br/>
+<p>In addition to the client object, the SR also contains the context object, which contains information about the user, org, etc. You should see the context object below if the kit has succesfully retreived the SR.
+<pre id="salesforce-context" style="overflow-x:hidden;"></pre>
+  Salesforce Context will be printed here
+</div>
+<script>
+  document.getElementById('salesforce-context').innerHTML = localStorage.getItem('sfContext');
+  window.sizeSfCanvasContent();
+</script>

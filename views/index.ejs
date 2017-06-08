@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="x-ua-compatible" content="IE=Edge"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <title>Canvas Starter Kit for Salesforce (Node JS)</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/canvas-starter-styles.css" />
+    <link rel="stylesheet" href="/stylesheets/salesforce-lightning-design-system.css" />
+  </head>
+  <body>
+    <script src="/javascripts/canvas-all.js"></script>
+    <script src="/javascripts/canvas-starter.js"></script>
+    <script src="/javascripts/canvas-services.js"></script>
+    <script src="/javascripts/canvas-init.js"></script>
+
+    <div id="app" style="height:100%;">
+
+      <div id="sidebar">
+        <h1 id="hello" class="title">Hello <%= firstName %></h1>
+        <h2 class="sub-title">
+          Welcome to the Canvas Starter Kit for Node JS!
+        </h2>
+        <p>
+          If you are seeing this page, then Salesforce has succesfully posted the signed request to the Canvas-Starter kit. Click on a link below to get more details on the Canvas topic.
+        </p>
+        <br/>
+        <ul style="padding-left:24px;">
+          <% chapters.forEach(function(chapter){ %>
+          <li class="<%= selected===chapter.label?'sidebar selected':'sidebar' %>">
+            <a href="/chapter/<%= chapter.fileName %>"><%= chapter.label %></a>
+          </li>
+          <% }); %>
+        </ul>
+      </div>
+
+      <div id="content">
+        <%- chapterDetails %>
+      </div>
+
+    </div>
+  </body>
+</html>

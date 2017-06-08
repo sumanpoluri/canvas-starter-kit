@@ -1,0 +1,26 @@
+<apex:page standardStylesheets="false" sideBar="false" controller="AlternateResource">
+
+    <apex:stylesheet value="{!URLFOR($Resource.style_resources,'styles/styles.css')}"/>
+
+    <apex:outputPanel rendered="{! $User.UIThemeDisplayed == 'Theme4d' }">
+        <apex:stylesheet value="{!URLFOR($Resource.style_resources,'styles/lightning.css')}"/>
+    </apex:outputPanel>
+
+    <apex:includeScript value="/canvas/sdk/js/36.0/controller.js"/>
+    <apex:includeScript value="{!$Resource.canvasStatic}"/>
+
+    <script type="text/javascript">
+        cnv.subscribe();
+    </script>
+
+    <apex:canvasApp namespacePrefix="yournamespace" canvasId="yournamespace" applicationName="Canvas_Starter_Kit" width="100%" maxHeight="infinite" scrolling="auto"/>
+
+    <script type="text/javascript">
+        setTimeout(function() {
+           cnv.init({
+               theme: "{! $User.UIThemeDisplayed}"
+           });
+        },0);
+    </script>
+
+</apex:page>

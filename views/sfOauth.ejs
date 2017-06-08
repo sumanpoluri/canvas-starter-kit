@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Salesforce OAUTH Authentication</title>
+    <link rel="stylesheet" href="/stylesheets/salesforce-lightning-design-system.css" />
+    <link rel="stylesheet" href="/stylesheets/canvas-starter-styles.css" />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <script src="/javascripts/canvas-all.js"></script>
+    <script src="/javascripts/canvas-starter.js?updated=52920161342"></script>
+  </head>
+  <body>
+    <script>
+      Sfdc.canvas(function(){
+        var loggedIn = Sfdc.canvas.oauth.loggedin();
+        if (loggedIn) {
+          Sfdc.canvas.client.repost({refresh : true});
+        }
+        login.addEventListener("click" , cnv.login);
+      });
+    </script>
+
+    <div id="oauth">
+      <h2 class="sub-title">User Authentication Required</h2>
+    </div>
+
+    <br/>
+
+    <div class="button-wrapper oauth">
+      <button id="login">Authorize App</button>
+    </div>
+
+  </body>
+</html>

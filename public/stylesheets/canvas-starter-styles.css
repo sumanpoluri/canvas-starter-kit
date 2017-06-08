@@ -1,0 +1,110 @@
+h1.title {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+h2.sub-title {
+  font-size: 1.3em;
+  margin: 0.47em 0;
+}
+
+h3.sub-title {
+  font-size: 1.1em;
+  margin: 0.27em 0;
+}
+
+ul.result {
+  height:140px;
+  padding-left:24px;
+  list-style-type: none;
+}
+
+li span{
+  float:left;
+}
+
+li span.column1 {
+  width:35%;
+}
+
+li span.column2 {
+  width:15%;
+}
+
+li.sidebar {
+  list-style-type: circle;
+}
+
+li.sidebar.selected {
+  font-weight:bold;
+}
+
+div.button-wrapper {
+  color:rgb(0,112,210);
+}
+
+div.button-wrapper.oauth {
+  width:30%;margin: 0 auto;text-align:center;
+}
+
+button {
+  border: 1px solid rgb(216,221,230);
+  background-color:white;
+  font-size:.875rem;
+  font-weight: 400;
+  border-radius:.25rem;
+  outline: none;
+  padding:.4rem .5rem .4rem .5rem;
+}
+
+button:hover {
+  background-color:rgb(230,230,230);
+  border: 1px solid rgb(150,150,230);
+}
+
+button:focus {
+  background-color:rgb(210,210,210);
+  border: 1px solid rgb(150,150,230);
+}
+
+button.delete {
+  padding:.1rem .5rem .1rem .5rem;
+  vertical-align:10%;
+  color:red;
+  margin-left:12px;
+}
+
+div#oauth {
+  width:30%;
+  margin: 0 auto;
+  margin-top:10%;
+  text-align:center;
+}
+
+div#sidebar {
+  display:inline-block;
+  float:left;
+  height:100%;
+  padding-left:24px;
+  padding-right:12px;
+  width:348px;
+  border-right-style:solid;
+  border-right-width:0.5px;
+  border-right-color:grey;
+}
+
+div#content {
+  height:100%;
+  padding-left:24px;
+  padding-right:24px;
+  overflow-y:auto;
+}
+
+span.success {
+  font-weight:bold;
+  color:green;
+}
+
+span.bold {
+  font-weight:bolder;
+}
