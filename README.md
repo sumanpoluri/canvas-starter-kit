@@ -64,11 +64,11 @@ Please follow the following steps in order to re-create the kit app in your org.
     2. **Consumer Secret** (You need to click to reveal it)
     3. **Callback URL**
 
-2. **Add App Consumer Data to PHP Pages**
-  1. In the Hosted app find the [canvas.php](https://github.com/sumanpoluri/canvas-starter-kit/blob/master/routes/canvas.js) and the [consumerData.js](https://github.com/sumanpoluri/canvas-starter-kit/blob/master/models/consumerData.js) files.
+2. **Add App Consumer Data to the JS Files**
+  1. In the Hosted app find the [canvas.js](https://github.com/sumanpoluri/canvas-starter-kit/blob/master/routes/canvas.js) and the [consumerData.js](https://github.com/sumanpoluri/canvas-starter-kit/blob/master/models/consumerData.js) files.
   2. In the canvas.js file enter the consumer secret on line 34 in the spot reserved by _&lt;consumer secret for your connected/canvas app&gt;_.
-  3. In the consumerData.php file enter your consumer key on line 2 in the spot reserved by _&lt;consumer key for your connected/canvas app&gt;_.
-  4. In the consumerData.php file enter your callback URL on line 3 in the spot resrerved by _&lt;callback url for your connected/canvas app&gt;_.
+  3. In the consumerData.js file enter your consumer key on line 2 in the spot reserved by _&lt;consumer key for your connected/canvas app&gt;_.
+  4. In the consumerData.js file enter your callback URL on line 3 in the spot resrerved by _&lt;callback url for your connected/canvas app&gt;_.
 
 3. **Create the Custom Setting**
     1. Go To SetUp/Custom Code/Custom Settings
